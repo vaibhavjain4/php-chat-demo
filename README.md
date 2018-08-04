@@ -1,48 +1,14 @@
-Instant php chat
-------------------------------
+# Instant php chat demo application
 
-![php chat screenshot](https://raw.githubusercontent.com/theodorosploumis/php-chat/master/php_chat.png)
+Messages are stored in ./messages/messages.html file <br>
+Add persistent storage to /opt/app-root/src/messages/ <br>
 
-### About
+Open 3-4 tabs using route url and use nickname input box on the right to put unique names. Send few messages and see the magic happening.<br>
+<br>
+Try scale up and down pods and see messages apperaing on all pods. Notice the chat room name (which is pod name)<br>
+<br>
+Convert http route to https route with ssl passthrough the service (8443 -> 8443)<br>
 
-This is a very simple php chat running with php.
-
- - Messages are saved on an html file (messages.html). There is no database.
- - Messages are posted with ajax.
- - No cache, either cookies exist.
-
-### Install
-
-You need **php** of course.
-
-Here is an example using the php built in server:
-
-```
-git clone git@github.com:theodorosploumis/php-chat.git
-cd php-chat/app
-php -S localhost:8000
-
-// Open http://localhost:8000
-```
-
-### Using docker
-
-There is an image on docker hub: [tplcom/php-chat](https://hub.docker.com/r/tplcom/php-chat)
-
-```
-docker pull tplcom/php-chat
-docker run -tid -p 8088:80 tplcom/php-chat
-// Open localhost:8088
-```
-
-Or using docker-compose
-
-```
-git clone git@github.com:theodorosploumis/php-chat.git
-cd php-chat
-
-docker-compose up -d
-```
 
 ### License
 
